@@ -67,8 +67,9 @@ def get_sheet():
 
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     with conn.cursor() as cursor:
-        students = cursor.execute("SELECT * FROM preferences");
-        conn.commit()
+        cursor.execute("SELECT * FROM preferences");
+        #conn.commit()
+        students = cursor.fetchall()
         return render_template("survey.html", students=students)
         conn.close()
 
