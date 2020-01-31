@@ -55,7 +55,7 @@ def post_form():
 
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     with conn.cursor() as cursor:
-        sql_instr = "insert into preferences(nourriture,pays, couleur) VALUES(\"" + str(comida)+ "\", \""+str(pais)+"\", \""+str(color) +"\")"
+        sql_instr = "insert into preferences(nourriture,pays, couleur) VALUES(" + "'{}'".format(str(comida)) + " , " + "'{}'".format(str(pais))  +" , " + "'{}'".format(str(color)) +")"
         cursor.execute(sql_instr)
         conn.commit()
         conn.close()
