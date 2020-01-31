@@ -6,7 +6,9 @@ import datetime
 import sqlite3
 import psycopg2
 
-DATABASE_URL = os.environ['postgres://alvtpzycglidaz:c141b7b9607ef4fe357461796c5252e6b505ad9407fb1c2cfa0cd094b3a05e30@ec2-107-22-222-161.compute-1.amazonaws.com:5432/dco646ec5hp31h']
+#DATABASE_URL = os.environ['postgres://alvtpzycglidaz:c141b7b9607ef4fe357461796c5252e6b505ad9407fb1c2cfa0cd094b3a05e30@ec2-107-22-222-161.compute-1.amazonaws.com:5432/dco646ec5hp31h']
+
+DATABASE_URL = os.environ['DATABASE_URL']
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 conn.autocommit = True
 cursor = conn.cursor()
