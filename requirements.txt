@@ -1,6 +1,6 @@
 cs50==3.0.1
 AppInst==2.1.5
-Flask==0.12.2
+Flask==1.0
 Jinja2==2.9.6
 MarkupSafe==1.0
 Pillow==4.0.0
