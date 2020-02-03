@@ -11,7 +11,8 @@
         <!-- TODO -->
         <input autocomplete="on" name="comida" class="mytext" placeholder="Nourriture" type="text" autofocus><br><br>
         <input autocomplete="on" name="pais" class="mytext" placeholder="Pays" type="text"><br><br>
-        <input autocomplete="off" name="color" class="mytext" placeholder="Couleur" type="hidden"><br><br>
+        <input type="hidden" id="FieldID" name="FieldName" VALUE="" /> 
+        <br><br>
     
         <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
         <button class="btn btn-primary" type="submit">Submit</button>
@@ -30,6 +31,11 @@
                 alert('You must provide values!');
                 return false;
             }
+            var value = getParameterByName('FieldName');
+            if (value !== '')
+                document.querySelector('#hiddenField').value = value;    
+
+
             return true;
         };
 

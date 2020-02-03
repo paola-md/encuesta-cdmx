@@ -43,11 +43,11 @@ def get_form():
     #f = open("survey.csv","w+")
 
 
-@app.route("/form", methods=["GET","POST"])
+@app.route("/form", methods=["POST"])
 def post_form():
     comida = request.form.get("comida")
     pais = request.form.get("pais")
-    color = str(request.args.get('key'))
+    color = request.form.get("FieldName")
     if len(color) == 0:
         color = "vacio"
 
