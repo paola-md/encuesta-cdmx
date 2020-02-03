@@ -47,7 +47,9 @@ def get_form():
 def post_form():
     comida = request.form.get("comida")
     pais = request.form.get("pais")
-    color = request.form.get("color")
+    color = str(request.args.get('key'))
+    if len(color) == 0:
+        color = "vacio"
 
     #date = str(datetime.date.today())
     if not comida or not pais or not color:
@@ -68,7 +70,7 @@ def get_food():
     if nourriture == "tacos":
         nueva_pag = "https://local.mx/restaurantes/comida-callejera/el-autentico-pato-manila-un-localito-de-puro-pato-en-la-condesa/"
     else:
-        nueva_pag = "https://local.mx/restaurantes/kumoto-omakase-lomas-chapultepec/"
+        nueva_pag = "https://www.google.com/search?q=comida+" + nourriture
     return redirect(nueva_pag, code=302 )  
 
 
