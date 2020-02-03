@@ -59,19 +59,17 @@ def post_form():
         cursor.execute(sql_instr)
         conn.commit()
         conn.close()
+        new_dir = "/after_survey?food=" + str(comida)
+    return redirect(new_dir)
 
-    return redirect("/sheet")
-
-@app.route("/sheet", methods=["GET"])
-def get_sheet():
-
-    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-    with conn.cursor() as cursor:
-        cursor.execute("SELECT * FROM preferences");
-        #conn.commit()
-        students = cursor.fetchall()
-        return render_template("survey.html", students=students)
-        conn.close()
+@app.route("/after_survey", methods=["GET"])
+def get_food():
+    nourriture = str(request.args.get('food'))
+    if nourriture == "tacos":
+        nueva_pag = "https://local.mx/restaurantes/comida-callejera/el-autentico-pato-manila-un-localito-de-puro-pato-en-la-condesa/"
+    else:
+        nueva_pag = "https://local.mx/restaurantes/kumoto-omakase-lomas-chapultepec/"
+    return redirect(nueva_pag, code=302 )  
 
 
 if __name__ == '__main__':
