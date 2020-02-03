@@ -35,12 +35,10 @@ def after_request(response):
 def get_index():
     return redirect("/form")
 
-
 @app.route("/form", methods=["GET"])
 def get_form():
-    return render_template("form.html")
-
-    #f = open("survey.csv","w+")
+    idsha = str(request.args.get('idsha'))
+    return render_template("form.html", value = idsha)
 
 
 @app.route("/form", methods=["POST"])
