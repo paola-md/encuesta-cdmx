@@ -43,7 +43,7 @@ def get_form():
     #f = open("survey.csv","w+")
 
 
-@app.route("/form", methods=["POST"])
+@app.route("/form", methods=["GET","POST"])
 def post_form():
     comida = request.form.get("comida")
     pais = request.form.get("pais")
