@@ -8,7 +8,7 @@
     <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
     <form action="/form" method="post">
 
-            
+        <p>División/Unidad en la que trabaja</p>    
         <!-- TODO -->
         <dropdo>
                 <script src="http://d3js.org/d3.v3.js"></script>
@@ -33,6 +33,8 @@
                 });
                 </script>
         </dropdo>
+
+        <p>Escribe el nombre de tu jefe directo</p>  
         <input autocomplete="on" name="comida" class="mytext" placeholder="Nourriture" type="text" autofocus><br><br>
         <input autocomplete="on" name="pais" class="mytext" placeholder="Pays" type="text"><br><br>
         <input type="hidden" id="FieldID" name="FieldName" VALUE= {{ value }} /> 
