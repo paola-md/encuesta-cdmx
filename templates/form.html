@@ -3,12 +3,13 @@
 {% block main %}
 
     <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
-    <h1 class="mb-3">Nous voulons vous rencontrer</h1>
+    <h1 class="mb-3">Otro nombre sin definir</h1>
 
     <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
     <form action="/form" method="post">
 
         <!-- TODO -->
+        
         <input autocomplete="on" name="comida" class="mytext" placeholder="Nourriture" type="text" autofocus><br><br>
         <input autocomplete="on" name="pais" class="mytext" placeholder="Pays" type="text"><br><br>
         <input type="hidden" id="FieldID" name="FieldName" VALUE= {{ value }} /> 
@@ -18,8 +19,30 @@
         <button class="btn btn-primary" type="submit">Submit</button>
 
     </form>
-
+    <dropdo>
+    </dropdo>
+    
+    <script src="http://d3js.org/d3.v3.js"></script>
     <script>
+
+        /*Llena área*/ 
+        d3.csv("area.csv", function(error, data) {
+        var select = d3.select("dropdo")
+            .append("div")
+            .append("select")
+
+        select
+            .on("change", function(d) {
+            var value = d3.select(this).property("value");
+            alert(value);
+            });
+
+        select.selectAll("option")
+            .data(data)
+            .enter()
+            .append("option")
+            .attr("value", function (d) { return d.value; })
+            .text(function (d) { return d.label; });
 
         /* TODO */
         document.querySelector('form').onsubmit = function() {
