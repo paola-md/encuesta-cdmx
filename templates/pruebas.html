@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+  <script src="http://d3js.org/d3.v3.js"></script>
+  <script>
+  d3.csv("areas.csv", function(error, data) {
+    var select = d3.select("body")
+      .append("div")
+      .append("select")
+
+    select
+      .on("change", function(d) {
+        var value = d3.select(this).property("value");
+        alert(value);
+      });
+
+    select.selectAll("option")
+      .data(data)
+      .enter()
+        .append("option")
+        .attr("value", function (d) { return d.value; })
+        .text(function (d) { return d.label; });
+  });
+  </script>
+</body>
+</html>
