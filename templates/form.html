@@ -3,13 +3,12 @@
 {% block main %}
 
     <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
-    <h1 class="mb-3">Otro nombre sin definir</h1>
+    <h1 class="mb-3">Parte 1</h1>
 
     <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
     <form action="/form" method="post">
-
-        <p>División/Unidad en la que trabaja</p>    
         <!-- TODO -->
+        <p>División/Unidad en la que trabaja</p>    
         <select name="unidad">
                 <option disabled selected value="División o Unidad">División o Unidad</option>
                 <option value=1>AGENCIA DE ATENCION ANIMAL DE LA CDMX</option>
@@ -116,10 +115,468 @@
                 <option value=102>NA</option>
         </select><br><br>
 
-        <p>Escribe el nombre de tu jefe directo</p>  
+        <p>Escribe el nombre de tu jefe directo</p> 
+        <input autocomplete="off" name="jefe" class="mytext" placeholder="Jefe Directo" type="text" autofocus><br><br>
+        
+        <p>Escribe el nombre de las cinco personas con las que trabaja más de cerca  y en qué división están</p> 
+        <table style="width:100%">
+                <tr>
+                  <th>Nombre</th>
+                  <th>División</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input autocomplete="off" name="persona1" class="mytext" placeholder="Persona 1" type="text" autofocus>
+                  </td>
+                  <td>
+                    <select name="unidad1">
+                            <option disabled selected value="División o Unidad">División o Unidad</option>
+                            <option value=1>AGENCIA DE ATENCION ANIMAL DE LA CDMX</option>
+                            <option value=2>AGENCIA DE GESTION URBANA DE LA CIUDAD DE MEXICO</option>
+                            <option value=3>AGENCIA DE RESILIENCIA DE LA CIUDAD DE MEXICO</option>
+                            <option value=4>AGENCIA DIGITAL DE INNOVACION PUBLICA</option>
+                            <option value=5>ALCALDIA DE ALVARO OBREGON</option>
+                            <option value=6>ALCALDIA DE AZCAPOTZALCO</option>
+                            <option value=7>ALCALDIA DE BENITO JUAREZ</option>
+                            <option value=8>ALCALDIA DE COYOACAN</option>
+                            <option value=9>ALCALDIA DE CUAJIMALPA DE MORELOS</option>
+                            <option value=10>ALCALDIA DE CUAUHTEMOC</option>
+                            <option value=11>ALCALDIA DE GUSTAVO A. MADERO</option>
+                            <option value=12>ALCALDIA DE IZTACALCO</option>
+                            <option value=13>ALCALDIA DE IZTAPALAPA</option>
+                            <option value=14>ALCALDIA DE LA MAGDALENA CONTRERAS</option>
+                            <option value=15>ALCALDIA DE MIGUEL HIDALGO</option>
+                            <option value=16>ALCALDIA DE MILPA ALTA</option>
+                            <option value=17>ALCALDIA DE TLAHUAC</option>
+                            <option value=18>ALCALDIA DE TLALPAN</option>
+                            <option value=19>ALCALDIA DE VENUSTIANO CARRANZA</option>
+                            <option value=20>ALCALDIA DE XOCHIMILCO</option>
+                            <option value=21>AUTORIDAD DEL ESPACIO P?BLICO DEL D.F.</option>
+                            <option value=22>CAJA DE PREVISION DE LA POLICIA AUXILIAR DE LA CDMX</option>
+                            <option value=23>CAJA DE PREVISION DE LA POLICIA PREVENTIVA DE LA CDMX</option>
+                            <option value=24>CAJA DE PREVISION DE LA POLICIA PREVENTIVA DEL D.F.</option>
+                            <option value=25>CAJA DE PREVISION P/TRABAJADORES A LISTA DE RAYA DEL GOB. D. F.</option>
+                            <option value=26>CAJA DE PREVISION P/TRABAJADORES A LISTA DE RAYA DEL GOB.DE LA CDMX</option>
+                            <option value=27>COMISION DE BUSQUEDA DE PERSONAS DE LA CIUDAD DE MEXICO</option>
+                            <option value=28>CONSEJERIA JURIDICA Y DE SERVICIOS LEGALES</option>
+                            <option value=29>CONSEJERIA JURIDICA Y DE SERVICIOS LEGALES DE LA CDMX</option>
+                            <option value=30>COORD. GRAL. DE LA AUT. DE LA ZONA PATRIMONIAL, MUNDIAL NAT. Y CULTURAL DE LA HUMANIDAD EN XOCHIMILCO, TLAHUAC Y MILPA ALTA</option>
+                            <option value=31>COORDINACION GENERAL DE LA AUTORIDAD DEL CENTRO HISTORICO</option>
+                            <option value=32>COORDINACION GENERAL DE LA AUTORIDAD DEL CENTRO HISTORICO DE LA CDMX</option>
+                            <option value=33>COORDINACION GENERAL DE LA COMISION DE ATENCION A VICTIMAS DE LA CIUDAD DE MEXICO</option>
+                            <option value=34>COORDINACION GENERAL DEL CENTRO DE COMANDO, CONTROL, COMPUTO, COMUNICACIONES Y CONTACTO CIUDADANO DE LA CIUDAD DE MEXICO</option>
+                            <option value=35>COORDINACION GENERAL DEL INSTITUTO DE FORMACION PROFESIONAL</option>
+                            <option value=36>DIR. GRAL. DE LA AGENCIA DE PROTECC. SANITARIA DE LA CDMX</option>
+                            <option value=37>DIR. GRAL. DE LA AGENCIA DE PROTECC. SANITARIA DEL GDF</option>
+                            <option value=38>DIR. GRAL. DE LA COORD. DE LOS CNTROS. DE TRANSFERENCIA MODAL DEL D. F.</option>
+                            <option value=39>DIR. GRAL. DEL MECANISMO DE PROTECCION INTEGRAL DE PERSONAS DEFENSORAS DE DERECHOS HUMANOS Y PERIODISTAS DE LA CDMX</option>
+                            <option value=40>DIR. GRAL. DEL MECANISMO DE PROTECCION INTEGRAL DE PERSONAS DEFENSORAS DE DERECHOS HUMANOS Y PERIODISTAS DEL D.F.</option>
+                            <option value=41>DIR. GRAL. DEL REGIMEN DE PROTECCION SOCIAL EN SALUD DE LA CDMX</option>
+                            <option value=42>DIR. GRAL. DEL REGIMEN DE PROTECCION SOCIAL EN SALUD DEL D.F.</option>
+                            <option value=43>DIRECCI?N GENERAL DEL SISTEMA DE RADIO Y TELEVISI?N DIGITAL</option>
+                            <option value=44>DIRECCION GENERAL DE LA PLANTA DE ASFALTO</option>
+                            <option value=45>DIRECCION GENERAL DEL ORGANO REGULADOR DE TRANSPORTE DE LA CDMX</option>
+                            <option value=46>DIRECCION GRAL. DEL CENTRO DE ATENCION A EMERGENCIAS Y PROTECCION CIUDADANA DE LA CD. DE MEXICO</option>
+                            <option value=47>ESCUELA DE ADMINISTRACI?N P?BLICA DEL D.F.</option>
+                            <option value=48>FIDEICOMISO EDUCACION GARANTIZADA DE LA CDMX</option>
+                            <option value=49>FIDEICOMISO EDUCACION GARANTIZADA DEL DISTRITO FEDERAL</option>
+                            <option value=50>FIDEICOMISO MUSEO DE ARTE POPULAR DE ARTE MEXICANO</option>
+                            <option value=51>FIDEICOMISO MUSEO ESTANQUILLO</option>
+                            <option value=52>FIDEICOMISO PARA LA PROMOCI?N Y DESARROLLO DEL CINE MEXICANO EN LA CIUDAD DE MEXICO</option>
+                            <option value=53>FIDEICOMISO PARA LA RECONSTRUCCION INTEGRAL DE LA CIUDAD DE MEXICO</option>
+                            <option value=54>HEROICO CUERPO DE BOMBEROS DEL D. F.</option>
+                            <option value=55>INSTITUTO DE CAPACITACION PARA EL TRABAJO DE LA CIUDAD DE MEXICO</option>
+                            <option value=56>INSTITUTO DE ESTUDIOS SUPERIORES DE LA CIUDAD DE MEXICO \ROSARIO CASTELLANOS\</option>
+                            <option value=57>INSTITUTO DE LAS MUJERES DEL DISTRITO FEDERAL</option>
+                            <option value=58>INSTITUTO DEL DEPORTE DEL DISTRITO FEDERAL</option>
+                            <option value=59>INSTITUTO PARA LA ATENCION Y PREVENCION DE LAS ADICCIONES EN LA CD. DE MEX.</option>
+                            <option value=60>JEFATURA DE GOBIERNO DE LA CDMX</option>
+                            <option value=61>JEFATURA DE GOBIERNO DEL DISTRITO FEDERAL</option>
+                            <option value=62>OFICIALIA MAYOR</option>
+                            <option value=63>PROCURADURIA GENERAL DE JUSTICIA DE LA CDMX</option>
+                            <option value=64>PROCURADURIA GENERAL DE JUSTICIA DEL DISTRITO FEDERAL</option>
+                            <option value=65>SECRETARIA DE ADMINISTRACION Y FINANZAS DE LA CDMX</option>
+                            <option value=66>SECRETARIA DE CULTURA DE LA CDMX</option>
+                            <option value=67>SECRETARIA DE DESARROLLO ECONOMICO</option>
+                            <option value=68>SECRETARIA DE DESARROLLO ECONOMICO DE LA CDMX</option>
+                            <option value=69>SECRETARIA DE DESARROLLO SOCIAL</option>
+                            <option value=70>SECRETARIA DE DESARROLLO URBANO Y VIVIENDA</option>
+                            <option value=71>SECRETARIA DE DESARROLLO URBANO Y VIVIENDA DE LA CDMX</option>
+                            <option value=72>SECRETARIA DE EDUCACION</option>
+                            <option value=73>SECRETARIA DE EDUCACION, CIENCIA, TECNOLOGIA E INNOVACION DE LA CDMX</option>
+                            <option value=74>SECRETARIA DE FINANZAS</option>
+                            <option value=75>SECRETARIA DE GESTION INTEGRAL DE RIESGOS Y PROTECCION CIVIL DE LA CDMX</option>
+                            <option value=76>SECRETARIA DE GOBIERNO</option>
+                            <option value=77>SECRETARIA DE GOBIERNO DE LA CDMX</option>
+                            <option value=78>SECRETARIA DE INCLUSION Y BIENESTAR SOCIAL DE LA CDMX</option>
+                            <option value=79>SECRETARIA DE LA CONTRALORIA GENERAL DE LA CDMX</option>
+                            <option value=80>SECRETARIA DE LA CONTRALORIA GENERAL DE LA CIUDAD DE MEXICO</option>
+                            <option value=81>SECRETARIA DE LAS MUJERES DE LA CDMX</option>
+                            <option value=82>SECRETARIA DE MOVILIDAD</option>
+                            <option value=83>SECRETARIA DE MOVILIDAD DE LA CDMX</option>
+                            <option value=84>SECRETARIA DE OBRAS Y SERVICIOS</option>
+                            <option value=85>SECRETARIA DE OBRAS Y SERVICIOS DE LA CDMX</option>
+                            <option value=86>SECRETARIA DE PROTECCION CIVIL</option>
+                            <option value=87>SECRETARIA DE PUEBLOS Y BARRIOS ORIGINARIOS Y COMUNIDADES INDIGENAS RESIDENTES DE LA CDMX</option>
+                            <option value=88>SECRETARIA DE SALUD</option>
+                            <option value=89>SECRETARIA DE SALUD DE LA CDMX</option>
+                            <option value=90>SECRETARIA DE SEGURIDAD CIUDADANA DE LA CDMX</option>
+                            <option value=91>SECRETARIA DE SEGURIDAD PUBLICA</option>
+                            <option value=92>SECRETARIA DE TRABAJO Y FOMENTO AL EMPLEO</option>
+                            <option value=93>SECRETARIA DE TRABAJO Y FOMENTO AL EMPLEO EN LA CDMX</option>
+                            <option value=94>SECRETARIA DE TURISMO</option>
+                            <option value=95>SECRETARIA DE TURISMO DE LA CDMX</option>
+                            <option value=96>SECRETARIA DEL MEDIO AMBIENTE</option>
+                            <option value=97>SECRETARIA DEL MEDIO AMBIENTE DE LA CDMX</option>
+                            <option value=98>SECRETARIA EJECUTIVA DE MECANISMOS DE SEGUIMIENTO Y EVALUACION DEL PROGRAMA DE DERECHOS HUMANOS</option>
+                            <option value=99>SISTEMA DE AGUAS DE LA CIUDAD DE MEXICO</option>
+                            <option value=100>SISTEMA P?BLICO DE RADIODIFUSION DE LA CIUDAD DE MEXICO</option>
+                            <option value=101>UNIVERSIDAD DE LA POLICIA DE LA CIUDAD DE MEXICO</option>
+                            <option value=102>NA</option>
+                    </select><br><br>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input autocomplete="off" name="persona2" class="mytext" placeholder="Persona 2" type="text" autofocus>
+                    </td>
+                    <td>
+                        <select name="unidad2">
+                                <option disabled selected value="División o Unidad">División o Unidad</option>
+                                <option value=1>AGENCIA DE ATENCION ANIMAL DE LA CDMX</option>
+                                <option value=2>AGENCIA DE GESTION URBANA DE LA CIUDAD DE MEXICO</option>
+                                <option value=3>AGENCIA DE RESILIENCIA DE LA CIUDAD DE MEXICO</option>
+                                <option value=4>AGENCIA DIGITAL DE INNOVACION PUBLICA</option>
+                                <option value=5>ALCALDIA DE ALVARO OBREGON</option>
+                                <option value=6>ALCALDIA DE AZCAPOTZALCO</option>
+                                <option value=7>ALCALDIA DE BENITO JUAREZ</option>
+                                <option value=8>ALCALDIA DE COYOACAN</option>
+                                <option value=9>ALCALDIA DE CUAJIMALPA DE MORELOS</option>
+                                <option value=10>ALCALDIA DE CUAUHTEMOC</option>
+                                <option value=11>ALCALDIA DE GUSTAVO A. MADERO</option>
+                                <option value=12>ALCALDIA DE IZTACALCO</option>
+                                <option value=13>ALCALDIA DE IZTAPALAPA</option>
+                                <option value=14>ALCALDIA DE LA MAGDALENA CONTRERAS</option>
+                                <option value=15>ALCALDIA DE MIGUEL HIDALGO</option>
+                                <option value=16>ALCALDIA DE MILPA ALTA</option>
+                                <option value=17>ALCALDIA DE TLAHUAC</option>
+                                <option value=18>ALCALDIA DE TLALPAN</option>
+                                <option value=19>ALCALDIA DE VENUSTIANO CARRANZA</option>
+                                <option value=20>ALCALDIA DE XOCHIMILCO</option>
+                                <option value=21>AUTORIDAD DEL ESPACIO P?BLICO DEL D.F.</option>
+                                <option value=22>CAJA DE PREVISION DE LA POLICIA AUXILIAR DE LA CDMX</option>
+                                <option value=23>CAJA DE PREVISION DE LA POLICIA PREVENTIVA DE LA CDMX</option>
+                                <option value=24>CAJA DE PREVISION DE LA POLICIA PREVENTIVA DEL D.F.</option>
+                                <option value=25>CAJA DE PREVISION P/TRABAJADORES A LISTA DE RAYA DEL GOB. D. F.</option>
+                                <option value=26>CAJA DE PREVISION P/TRABAJADORES A LISTA DE RAYA DEL GOB.DE LA CDMX</option>
+                                <option value=27>COMISION DE BUSQUEDA DE PERSONAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=28>CONSEJERIA JURIDICA Y DE SERVICIOS LEGALES</option>
+                                <option value=29>CONSEJERIA JURIDICA Y DE SERVICIOS LEGALES DE LA CDMX</option>
+                                <option value=30>COORD. GRAL. DE LA AUT. DE LA ZONA PATRIMONIAL, MUNDIAL NAT. Y CULTURAL DE LA HUMANIDAD EN XOCHIMILCO, TLAHUAC Y MILPA ALTA</option>
+                                <option value=31>COORDINACION GENERAL DE LA AUTORIDAD DEL CENTRO HISTORICO</option>
+                                <option value=32>COORDINACION GENERAL DE LA AUTORIDAD DEL CENTRO HISTORICO DE LA CDMX</option>
+                                <option value=33>COORDINACION GENERAL DE LA COMISION DE ATENCION A VICTIMAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=34>COORDINACION GENERAL DEL CENTRO DE COMANDO, CONTROL, COMPUTO, COMUNICACIONES Y CONTACTO CIUDADANO DE LA CIUDAD DE MEXICO</option>
+                                <option value=35>COORDINACION GENERAL DEL INSTITUTO DE FORMACION PROFESIONAL</option>
+                                <option value=36>DIR. GRAL. DE LA AGENCIA DE PROTECC. SANITARIA DE LA CDMX</option>
+                                <option value=37>DIR. GRAL. DE LA AGENCIA DE PROTECC. SANITARIA DEL GDF</option>
+                                <option value=38>DIR. GRAL. DE LA COORD. DE LOS CNTROS. DE TRANSFERENCIA MODAL DEL D. F.</option>
+                                <option value=39>DIR. GRAL. DEL MECANISMO DE PROTECCION INTEGRAL DE PERSONAS DEFENSORAS DE DERECHOS HUMANOS Y PERIODISTAS DE LA CDMX</option>
+                                <option value=40>DIR. GRAL. DEL MECANISMO DE PROTECCION INTEGRAL DE PERSONAS DEFENSORAS DE DERECHOS HUMANOS Y PERIODISTAS DEL D.F.</option>
+                                <option value=41>DIR. GRAL. DEL REGIMEN DE PROTECCION SOCIAL EN SALUD DE LA CDMX</option>
+                                <option value=42>DIR. GRAL. DEL REGIMEN DE PROTECCION SOCIAL EN SALUD DEL D.F.</option>
+                                <option value=43>DIRECCI?N GENERAL DEL SISTEMA DE RADIO Y TELEVISI?N DIGITAL</option>
+                                <option value=44>DIRECCION GENERAL DE LA PLANTA DE ASFALTO</option>
+                                <option value=45>DIRECCION GENERAL DEL ORGANO REGULADOR DE TRANSPORTE DE LA CDMX</option>
+                                <option value=46>DIRECCION GRAL. DEL CENTRO DE ATENCION A EMERGENCIAS Y PROTECCION CIUDADANA DE LA CD. DE MEXICO</option>
+                                <option value=47>ESCUELA DE ADMINISTRACI?N P?BLICA DEL D.F.</option>
+                                <option value=48>FIDEICOMISO EDUCACION GARANTIZADA DE LA CDMX</option>
+                                <option value=49>FIDEICOMISO EDUCACION GARANTIZADA DEL DISTRITO FEDERAL</option>
+                                <option value=50>FIDEICOMISO MUSEO DE ARTE POPULAR DE ARTE MEXICANO</option>
+                                <option value=51>FIDEICOMISO MUSEO ESTANQUILLO</option>
+                                <option value=52>FIDEICOMISO PARA LA PROMOCI?N Y DESARROLLO DEL CINE MEXICANO EN LA CIUDAD DE MEXICO</option>
+                                <option value=53>FIDEICOMISO PARA LA RECONSTRUCCION INTEGRAL DE LA CIUDAD DE MEXICO</option>
+                                <option value=54>HEROICO CUERPO DE BOMBEROS DEL D. F.</option>
+                                <option value=55>INSTITUTO DE CAPACITACION PARA EL TRABAJO DE LA CIUDAD DE MEXICO</option>
+                                <option value=56>INSTITUTO DE ESTUDIOS SUPERIORES DE LA CIUDAD DE MEXICO \ROSARIO CASTELLANOS\</option>
+                                <option value=57>INSTITUTO DE LAS MUJERES DEL DISTRITO FEDERAL</option>
+                                <option value=58>INSTITUTO DEL DEPORTE DEL DISTRITO FEDERAL</option>
+                                <option value=59>INSTITUTO PARA LA ATENCION Y PREVENCION DE LAS ADICCIONES EN LA CD. DE MEX.</option>
+                                <option value=60>JEFATURA DE GOBIERNO DE LA CDMX</option>
+                                <option value=61>JEFATURA DE GOBIERNO DEL DISTRITO FEDERAL</option>
+                                <option value=62>OFICIALIA MAYOR</option>
+                                <option value=63>PROCURADURIA GENERAL DE JUSTICIA DE LA CDMX</option>
+                                <option value=64>PROCURADURIA GENERAL DE JUSTICIA DEL DISTRITO FEDERAL</option>
+                                <option value=65>SECRETARIA DE ADMINISTRACION Y FINANZAS DE LA CDMX</option>
+                                <option value=66>SECRETARIA DE CULTURA DE LA CDMX</option>
+                                <option value=67>SECRETARIA DE DESARROLLO ECONOMICO</option>
+                                <option value=68>SECRETARIA DE DESARROLLO ECONOMICO DE LA CDMX</option>
+                                <option value=69>SECRETARIA DE DESARROLLO SOCIAL</option>
+                                <option value=70>SECRETARIA DE DESARROLLO URBANO Y VIVIENDA</option>
+                                <option value=71>SECRETARIA DE DESARROLLO URBANO Y VIVIENDA DE LA CDMX</option>
+                                <option value=72>SECRETARIA DE EDUCACION</option>
+                                <option value=73>SECRETARIA DE EDUCACION, CIENCIA, TECNOLOGIA E INNOVACION DE LA CDMX</option>
+                                <option value=74>SECRETARIA DE FINANZAS</option>
+                                <option value=75>SECRETARIA DE GESTION INTEGRAL DE RIESGOS Y PROTECCION CIVIL DE LA CDMX</option>
+                                <option value=76>SECRETARIA DE GOBIERNO</option>
+                                <option value=77>SECRETARIA DE GOBIERNO DE LA CDMX</option>
+                                <option value=78>SECRETARIA DE INCLUSION Y BIENESTAR SOCIAL DE LA CDMX</option>
+                                <option value=79>SECRETARIA DE LA CONTRALORIA GENERAL DE LA CDMX</option>
+                                <option value=80>SECRETARIA DE LA CONTRALORIA GENERAL DE LA CIUDAD DE MEXICO</option>
+                                <option value=81>SECRETARIA DE LAS MUJERES DE LA CDMX</option>
+                                <option value=82>SECRETARIA DE MOVILIDAD</option>
+                                <option value=83>SECRETARIA DE MOVILIDAD DE LA CDMX</option>
+                                <option value=84>SECRETARIA DE OBRAS Y SERVICIOS</option>
+                                <option value=85>SECRETARIA DE OBRAS Y SERVICIOS DE LA CDMX</option>
+                                <option value=86>SECRETARIA DE PROTECCION CIVIL</option>
+                                <option value=87>SECRETARIA DE PUEBLOS Y BARRIOS ORIGINARIOS Y COMUNIDADES INDIGENAS RESIDENTES DE LA CDMX</option>
+                                <option value=88>SECRETARIA DE SALUD</option>
+                                <option value=89>SECRETARIA DE SALUD DE LA CDMX</option>
+                                <option value=90>SECRETARIA DE SEGURIDAD CIUDADANA DE LA CDMX</option>
+                                <option value=91>SECRETARIA DE SEGURIDAD PUBLICA</option>
+                                <option value=92>SECRETARIA DE TRABAJO Y FOMENTO AL EMPLEO</option>
+                                <option value=93>SECRETARIA DE TRABAJO Y FOMENTO AL EMPLEO EN LA CDMX</option>
+                                <option value=94>SECRETARIA DE TURISMO</option>
+                                <option value=95>SECRETARIA DE TURISMO DE LA CDMX</option>
+                                <option value=96>SECRETARIA DEL MEDIO AMBIENTE</option>
+                                <option value=97>SECRETARIA DEL MEDIO AMBIENTE DE LA CDMX</option>
+                                <option value=98>SECRETARIA EJECUTIVA DE MECANISMOS DE SEGUIMIENTO Y EVALUACION DEL PROGRAMA DE DERECHOS HUMANOS</option>
+                                <option value=99>SISTEMA DE AGUAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=100>SISTEMA P?BLICO DE RADIODIFUSION DE LA CIUDAD DE MEXICO</option>
+                                <option value=101>UNIVERSIDAD DE LA POLICIA DE LA CIUDAD DE MEXICO</option>
+                                <option value=102>NA</option>
+                        </select><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input autocomplete="off" name="persona3" class="mytext" placeholder="Persona 3" type="text" autofocus>
+                    </td>
+                    <td>
+                        <select name="unidad3">
+                                <option disabled selected value="División o Unidad">División o Unidad</option>
+                                <option value=1>AGENCIA DE ATENCION ANIMAL DE LA CDMX</option>
+                                <option value=2>AGENCIA DE GESTION URBANA DE LA CIUDAD DE MEXICO</option>
+                                <option value=3>AGENCIA DE RESILIENCIA DE LA CIUDAD DE MEXICO</option>
+                                <option value=4>AGENCIA DIGITAL DE INNOVACION PUBLICA</option>
+                                <option value=5>ALCALDIA DE ALVARO OBREGON</option>
+                                <option value=6>ALCALDIA DE AZCAPOTZALCO</option>
+                                <option value=7>ALCALDIA DE BENITO JUAREZ</option>
+                                <option value=8>ALCALDIA DE COYOACAN</option>
+                                <option value=9>ALCALDIA DE CUAJIMALPA DE MORELOS</option>
+                                <option value=10>ALCALDIA DE CUAUHTEMOC</option>
+                                <option value=11>ALCALDIA DE GUSTAVO A. MADERO</option>
+                                <option value=12>ALCALDIA DE IZTACALCO</option>
+                                <option value=13>ALCALDIA DE IZTAPALAPA</option>
+                                <option value=14>ALCALDIA DE LA MAGDALENA CONTRERAS</option>
+                                <option value=15>ALCALDIA DE MIGUEL HIDALGO</option>
+                                <option value=16>ALCALDIA DE MILPA ALTA</option>
+                                <option value=17>ALCALDIA DE TLAHUAC</option>
+                                <option value=18>ALCALDIA DE TLALPAN</option>
+                                <option value=19>ALCALDIA DE VENUSTIANO CARRANZA</option>
+                                <option value=20>ALCALDIA DE XOCHIMILCO</option>
+                                <option value=21>AUTORIDAD DEL ESPACIO P?BLICO DEL D.F.</option>
+                                <option value=22>CAJA DE PREVISION DE LA POLICIA AUXILIAR DE LA CDMX</option>
+                                <option value=23>CAJA DE PREVISION DE LA POLICIA PREVENTIVA DE LA CDMX</option>
+                                <option value=24>CAJA DE PREVISION DE LA POLICIA PREVENTIVA DEL D.F.</option>
+                                <option value=25>CAJA DE PREVISION P/TRABAJADORES A LISTA DE RAYA DEL GOB. D. F.</option>
+                                <option value=26>CAJA DE PREVISION P/TRABAJADORES A LISTA DE RAYA DEL GOB.DE LA CDMX</option>
+                                <option value=27>COMISION DE BUSQUEDA DE PERSONAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=28>CONSEJERIA JURIDICA Y DE SERVICIOS LEGALES</option>
+                                <option value=29>CONSEJERIA JURIDICA Y DE SERVICIOS LEGALES DE LA CDMX</option>
+                                <option value=30>COORD. GRAL. DE LA AUT. DE LA ZONA PATRIMONIAL, MUNDIAL NAT. Y CULTURAL DE LA HUMANIDAD EN XOCHIMILCO, TLAHUAC Y MILPA ALTA</option>
+                                <option value=31>COORDINACION GENERAL DE LA AUTORIDAD DEL CENTRO HISTORICO</option>
+                                <option value=32>COORDINACION GENERAL DE LA AUTORIDAD DEL CENTRO HISTORICO DE LA CDMX</option>
+                                <option value=33>COORDINACION GENERAL DE LA COMISION DE ATENCION A VICTIMAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=34>COORDINACION GENERAL DEL CENTRO DE COMANDO, CONTROL, COMPUTO, COMUNICACIONES Y CONTACTO CIUDADANO DE LA CIUDAD DE MEXICO</option>
+                                <option value=35>COORDINACION GENERAL DEL INSTITUTO DE FORMACION PROFESIONAL</option>
+                                <option value=36>DIR. GRAL. DE LA AGENCIA DE PROTECC. SANITARIA DE LA CDMX</option>
+                                <option value=37>DIR. GRAL. DE LA AGENCIA DE PROTECC. SANITARIA DEL GDF</option>
+                                <option value=38>DIR. GRAL. DE LA COORD. DE LOS CNTROS. DE TRANSFERENCIA MODAL DEL D. F.</option>
+                                <option value=39>DIR. GRAL. DEL MECANISMO DE PROTECCION INTEGRAL DE PERSONAS DEFENSORAS DE DERECHOS HUMANOS Y PERIODISTAS DE LA CDMX</option>
+                                <option value=40>DIR. GRAL. DEL MECANISMO DE PROTECCION INTEGRAL DE PERSONAS DEFENSORAS DE DERECHOS HUMANOS Y PERIODISTAS DEL D.F.</option>
+                                <option value=41>DIR. GRAL. DEL REGIMEN DE PROTECCION SOCIAL EN SALUD DE LA CDMX</option>
+                                <option value=42>DIR. GRAL. DEL REGIMEN DE PROTECCION SOCIAL EN SALUD DEL D.F.</option>
+                                <option value=43>DIRECCI?N GENERAL DEL SISTEMA DE RADIO Y TELEVISI?N DIGITAL</option>
+                                <option value=44>DIRECCION GENERAL DE LA PLANTA DE ASFALTO</option>
+                                <option value=45>DIRECCION GENERAL DEL ORGANO REGULADOR DE TRANSPORTE DE LA CDMX</option>
+                                <option value=46>DIRECCION GRAL. DEL CENTRO DE ATENCION A EMERGENCIAS Y PROTECCION CIUDADANA DE LA CD. DE MEXICO</option>
+                                <option value=47>ESCUELA DE ADMINISTRACI?N P?BLICA DEL D.F.</option>
+                                <option value=48>FIDEICOMISO EDUCACION GARANTIZADA DE LA CDMX</option>
+                                <option value=49>FIDEICOMISO EDUCACION GARANTIZADA DEL DISTRITO FEDERAL</option>
+                                <option value=50>FIDEICOMISO MUSEO DE ARTE POPULAR DE ARTE MEXICANO</option>
+                                <option value=51>FIDEICOMISO MUSEO ESTANQUILLO</option>
+                                <option value=52>FIDEICOMISO PARA LA PROMOCI?N Y DESARROLLO DEL CINE MEXICANO EN LA CIUDAD DE MEXICO</option>
+                                <option value=53>FIDEICOMISO PARA LA RECONSTRUCCION INTEGRAL DE LA CIUDAD DE MEXICO</option>
+                                <option value=54>HEROICO CUERPO DE BOMBEROS DEL D. F.</option>
+                                <option value=55>INSTITUTO DE CAPACITACION PARA EL TRABAJO DE LA CIUDAD DE MEXICO</option>
+                                <option value=56>INSTITUTO DE ESTUDIOS SUPERIORES DE LA CIUDAD DE MEXICO \ROSARIO CASTELLANOS\</option>
+                                <option value=57>INSTITUTO DE LAS MUJERES DEL DISTRITO FEDERAL</option>
+                                <option value=58>INSTITUTO DEL DEPORTE DEL DISTRITO FEDERAL</option>
+                                <option value=59>INSTITUTO PARA LA ATENCION Y PREVENCION DE LAS ADICCIONES EN LA CD. DE MEX.</option>
+                                <option value=60>JEFATURA DE GOBIERNO DE LA CDMX</option>
+                                <option value=61>JEFATURA DE GOBIERNO DEL DISTRITO FEDERAL</option>
+                                <option value=62>OFICIALIA MAYOR</option>
+                                <option value=63>PROCURADURIA GENERAL DE JUSTICIA DE LA CDMX</option>
+                                <option value=64>PROCURADURIA GENERAL DE JUSTICIA DEL DISTRITO FEDERAL</option>
+                                <option value=65>SECRETARIA DE ADMINISTRACION Y FINANZAS DE LA CDMX</option>
+                                <option value=66>SECRETARIA DE CULTURA DE LA CDMX</option>
+                                <option value=67>SECRETARIA DE DESARROLLO ECONOMICO</option>
+                                <option value=68>SECRETARIA DE DESARROLLO ECONOMICO DE LA CDMX</option>
+                                <option value=69>SECRETARIA DE DESARROLLO SOCIAL</option>
+                                <option value=70>SECRETARIA DE DESARROLLO URBANO Y VIVIENDA</option>
+                                <option value=71>SECRETARIA DE DESARROLLO URBANO Y VIVIENDA DE LA CDMX</option>
+                                <option value=72>SECRETARIA DE EDUCACION</option>
+                                <option value=73>SECRETARIA DE EDUCACION, CIENCIA, TECNOLOGIA E INNOVACION DE LA CDMX</option>
+                                <option value=74>SECRETARIA DE FINANZAS</option>
+                                <option value=75>SECRETARIA DE GESTION INTEGRAL DE RIESGOS Y PROTECCION CIVIL DE LA CDMX</option>
+                                <option value=76>SECRETARIA DE GOBIERNO</option>
+                                <option value=77>SECRETARIA DE GOBIERNO DE LA CDMX</option>
+                                <option value=78>SECRETARIA DE INCLUSION Y BIENESTAR SOCIAL DE LA CDMX</option>
+                                <option value=79>SECRETARIA DE LA CONTRALORIA GENERAL DE LA CDMX</option>
+                                <option value=80>SECRETARIA DE LA CONTRALORIA GENERAL DE LA CIUDAD DE MEXICO</option>
+                                <option value=81>SECRETARIA DE LAS MUJERES DE LA CDMX</option>
+                                <option value=82>SECRETARIA DE MOVILIDAD</option>
+                                <option value=83>SECRETARIA DE MOVILIDAD DE LA CDMX</option>
+                                <option value=84>SECRETARIA DE OBRAS Y SERVICIOS</option>
+                                <option value=85>SECRETARIA DE OBRAS Y SERVICIOS DE LA CDMX</option>
+                                <option value=86>SECRETARIA DE PROTECCION CIVIL</option>
+                                <option value=87>SECRETARIA DE PUEBLOS Y BARRIOS ORIGINARIOS Y COMUNIDADES INDIGENAS RESIDENTES DE LA CDMX</option>
+                                <option value=88>SECRETARIA DE SALUD</option>
+                                <option value=89>SECRETARIA DE SALUD DE LA CDMX</option>
+                                <option value=90>SECRETARIA DE SEGURIDAD CIUDADANA DE LA CDMX</option>
+                                <option value=91>SECRETARIA DE SEGURIDAD PUBLICA</option>
+                                <option value=92>SECRETARIA DE TRABAJO Y FOMENTO AL EMPLEO</option>
+                                <option value=93>SECRETARIA DE TRABAJO Y FOMENTO AL EMPLEO EN LA CDMX</option>
+                                <option value=94>SECRETARIA DE TURISMO</option>
+                                <option value=95>SECRETARIA DE TURISMO DE LA CDMX</option>
+                                <option value=96>SECRETARIA DEL MEDIO AMBIENTE</option>
+                                <option value=97>SECRETARIA DEL MEDIO AMBIENTE DE LA CDMX</option>
+                                <option value=98>SECRETARIA EJECUTIVA DE MECANISMOS DE SEGUIMIENTO Y EVALUACION DEL PROGRAMA DE DERECHOS HUMANOS</option>
+                                <option value=99>SISTEMA DE AGUAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=100>SISTEMA P?BLICO DE RADIODIFUSION DE LA CIUDAD DE MEXICO</option>
+                                <option value=101>UNIVERSIDAD DE LA POLICIA DE LA CIUDAD DE MEXICO</option>
+                                <option value=102>NA</option>
+                        </select><br><br>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <input autocomplete="off" name="persona4" class="mytext" placeholder="Persona 4" type="text" autofocus>
+                    </td>
+                    <td>
+                        <select name="unidad4">
+                                <option disabled selected value="División o Unidad">División o Unidad</option>
+                                <option value=1>AGENCIA DE ATENCION ANIMAL DE LA CDMX</option>
+                                <option value=2>AGENCIA DE GESTION URBANA DE LA CIUDAD DE MEXICO</option>
+                                <option value=3>AGENCIA DE RESILIENCIA DE LA CIUDAD DE MEXICO</option>
+                                <option value=4>AGENCIA DIGITAL DE INNOVACION PUBLICA</option>
+                                <option value=5>ALCALDIA DE ALVARO OBREGON</option>
+                                <option value=6>ALCALDIA DE AZCAPOTZALCO</option>
+                                <option value=7>ALCALDIA DE BENITO JUAREZ</option>
+                                <option value=8>ALCALDIA DE COYOACAN</option>
+                                <option value=9>ALCALDIA DE CUAJIMALPA DE MORELOS</option>
+                                <option value=10>ALCALDIA DE CUAUHTEMOC</option>
+                                <option value=11>ALCALDIA DE GUSTAVO A. MADERO</option>
+                                <option value=12>ALCALDIA DE IZTACALCO</option>
+                                <option value=13>ALCALDIA DE IZTAPALAPA</option>
+                                <option value=14>ALCALDIA DE LA MAGDALENA CONTRERAS</option>
+                                <option value=15>ALCALDIA DE MIGUEL HIDALGO</option>
+                                <option value=16>ALCALDIA DE MILPA ALTA</option>
+                                <option value=17>ALCALDIA DE TLAHUAC</option>
+                                <option value=18>ALCALDIA DE TLALPAN</option>
+                                <option value=19>ALCALDIA DE VENUSTIANO CARRANZA</option>
+                                <option value=20>ALCALDIA DE XOCHIMILCO</option>
+                                <option value=21>AUTORIDAD DEL ESPACIO P?BLICO DEL D.F.</option>
+                                <option value=22>CAJA DE PREVISION DE LA POLICIA AUXILIAR DE LA CDMX</option>
+                                <option value=23>CAJA DE PREVISION DE LA POLICIA PREVENTIVA DE LA CDMX</option>
+                                <option value=24>CAJA DE PREVISION DE LA POLICIA PREVENTIVA DEL D.F.</option>
+                                <option value=25>CAJA DE PREVISION P/TRABAJADORES A LISTA DE RAYA DEL GOB. D. F.</option>
+                                <option value=26>CAJA DE PREVISION P/TRABAJADORES A LISTA DE RAYA DEL GOB.DE LA CDMX</option>
+                                <option value=27>COMISION DE BUSQUEDA DE PERSONAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=28>CONSEJERIA JURIDICA Y DE SERVICIOS LEGALES</option>
+                                <option value=29>CONSEJERIA JURIDICA Y DE SERVICIOS LEGALES DE LA CDMX</option>
+                                <option value=30>COORD. GRAL. DE LA AUT. DE LA ZONA PATRIMONIAL, MUNDIAL NAT. Y CULTURAL DE LA HUMANIDAD EN XOCHIMILCO, TLAHUAC Y MILPA ALTA</option>
+                                <option value=31>COORDINACION GENERAL DE LA AUTORIDAD DEL CENTRO HISTORICO</option>
+                                <option value=32>COORDINACION GENERAL DE LA AUTORIDAD DEL CENTRO HISTORICO DE LA CDMX</option>
+                                <option value=33>COORDINACION GENERAL DE LA COMISION DE ATENCION A VICTIMAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=34>COORDINACION GENERAL DEL CENTRO DE COMANDO, CONTROL, COMPUTO, COMUNICACIONES Y CONTACTO CIUDADANO DE LA CIUDAD DE MEXICO</option>
+                                <option value=35>COORDINACION GENERAL DEL INSTITUTO DE FORMACION PROFESIONAL</option>
+                                <option value=36>DIR. GRAL. DE LA AGENCIA DE PROTECC. SANITARIA DE LA CDMX</option>
+                                <option value=37>DIR. GRAL. DE LA AGENCIA DE PROTECC. SANITARIA DEL GDF</option>
+                                <option value=38>DIR. GRAL. DE LA COORD. DE LOS CNTROS. DE TRANSFERENCIA MODAL DEL D. F.</option>
+                                <option value=39>DIR. GRAL. DEL MECANISMO DE PROTECCION INTEGRAL DE PERSONAS DEFENSORAS DE DERECHOS HUMANOS Y PERIODISTAS DE LA CDMX</option>
+                                <option value=40>DIR. GRAL. DEL MECANISMO DE PROTECCION INTEGRAL DE PERSONAS DEFENSORAS DE DERECHOS HUMANOS Y PERIODISTAS DEL D.F.</option>
+                                <option value=41>DIR. GRAL. DEL REGIMEN DE PROTECCION SOCIAL EN SALUD DE LA CDMX</option>
+                                <option value=42>DIR. GRAL. DEL REGIMEN DE PROTECCION SOCIAL EN SALUD DEL D.F.</option>
+                                <option value=43>DIRECCI?N GENERAL DEL SISTEMA DE RADIO Y TELEVISI?N DIGITAL</option>
+                                <option value=44>DIRECCION GENERAL DE LA PLANTA DE ASFALTO</option>
+                                <option value=45>DIRECCION GENERAL DEL ORGANO REGULADOR DE TRANSPORTE DE LA CDMX</option>
+                                <option value=46>DIRECCION GRAL. DEL CENTRO DE ATENCION A EMERGENCIAS Y PROTECCION CIUDADANA DE LA CD. DE MEXICO</option>
+                                <option value=47>ESCUELA DE ADMINISTRACI?N P?BLICA DEL D.F.</option>
+                                <option value=48>FIDEICOMISO EDUCACION GARANTIZADA DE LA CDMX</option>
+                                <option value=49>FIDEICOMISO EDUCACION GARANTIZADA DEL DISTRITO FEDERAL</option>
+                                <option value=50>FIDEICOMISO MUSEO DE ARTE POPULAR DE ARTE MEXICANO</option>
+                                <option value=51>FIDEICOMISO MUSEO ESTANQUILLO</option>
+                                <option value=52>FIDEICOMISO PARA LA PROMOCI?N Y DESARROLLO DEL CINE MEXICANO EN LA CIUDAD DE MEXICO</option>
+                                <option value=53>FIDEICOMISO PARA LA RECONSTRUCCION INTEGRAL DE LA CIUDAD DE MEXICO</option>
+                                <option value=54>HEROICO CUERPO DE BOMBEROS DEL D. F.</option>
+                                <option value=55>INSTITUTO DE CAPACITACION PARA EL TRABAJO DE LA CIUDAD DE MEXICO</option>
+                                <option value=56>INSTITUTO DE ESTUDIOS SUPERIORES DE LA CIUDAD DE MEXICO \ROSARIO CASTELLANOS\</option>
+                                <option value=57>INSTITUTO DE LAS MUJERES DEL DISTRITO FEDERAL</option>
+                                <option value=58>INSTITUTO DEL DEPORTE DEL DISTRITO FEDERAL</option>
+                                <option value=59>INSTITUTO PARA LA ATENCION Y PREVENCION DE LAS ADICCIONES EN LA CD. DE MEX.</option>
+                                <option value=60>JEFATURA DE GOBIERNO DE LA CDMX</option>
+                                <option value=61>JEFATURA DE GOBIERNO DEL DISTRITO FEDERAL</option>
+                                <option value=62>OFICIALIA MAYOR</option>
+                                <option value=63>PROCURADURIA GENERAL DE JUSTICIA DE LA CDMX</option>
+                                <option value=64>PROCURADURIA GENERAL DE JUSTICIA DEL DISTRITO FEDERAL</option>
+                                <option value=65>SECRETARIA DE ADMINISTRACION Y FINANZAS DE LA CDMX</option>
+                                <option value=66>SECRETARIA DE CULTURA DE LA CDMX</option>
+                                <option value=67>SECRETARIA DE DESARROLLO ECONOMICO</option>
+                                <option value=68>SECRETARIA DE DESARROLLO ECONOMICO DE LA CDMX</option>
+                                <option value=69>SECRETARIA DE DESARROLLO SOCIAL</option>
+                                <option value=70>SECRETARIA DE DESARROLLO URBANO Y VIVIENDA</option>
+                                <option value=71>SECRETARIA DE DESARROLLO URBANO Y VIVIENDA DE LA CDMX</option>
+                                <option value=72>SECRETARIA DE EDUCACION</option>
+                                <option value=73>SECRETARIA DE EDUCACION, CIENCIA, TECNOLOGIA E INNOVACION DE LA CDMX</option>
+                                <option value=74>SECRETARIA DE FINANZAS</option>
+                                <option value=75>SECRETARIA DE GESTION INTEGRAL DE RIESGOS Y PROTECCION CIVIL DE LA CDMX</option>
+                                <option value=76>SECRETARIA DE GOBIERNO</option>
+                                <option value=77>SECRETARIA DE GOBIERNO DE LA CDMX</option>
+                                <option value=78>SECRETARIA DE INCLUSION Y BIENESTAR SOCIAL DE LA CDMX</option>
+                                <option value=79>SECRETARIA DE LA CONTRALORIA GENERAL DE LA CDMX</option>
+                                <option value=80>SECRETARIA DE LA CONTRALORIA GENERAL DE LA CIUDAD DE MEXICO</option>
+                                <option value=81>SECRETARIA DE LAS MUJERES DE LA CDMX</option>
+                                <option value=82>SECRETARIA DE MOVILIDAD</option>
+                                <option value=83>SECRETARIA DE MOVILIDAD DE LA CDMX</option>
+                                <option value=84>SECRETARIA DE OBRAS Y SERVICIOS</option>
+                                <option value=85>SECRETARIA DE OBRAS Y SERVICIOS DE LA CDMX</option>
+                                <option value=86>SECRETARIA DE PROTECCION CIVIL</option>
+                                <option value=87>SECRETARIA DE PUEBLOS Y BARRIOS ORIGINARIOS Y COMUNIDADES INDIGENAS RESIDENTES DE LA CDMX</option>
+                                <option value=88>SECRETARIA DE SALUD</option>
+                                <option value=89>SECRETARIA DE SALUD DE LA CDMX</option>
+                                <option value=90>SECRETARIA DE SEGURIDAD CIUDADANA DE LA CDMX</option>
+                                <option value=91>SECRETARIA DE SEGURIDAD PUBLICA</option>
+                                <option value=92>SECRETARIA DE TRABAJO Y FOMENTO AL EMPLEO</option>
+                                <option value=93>SECRETARIA DE TRABAJO Y FOMENTO AL EMPLEO EN LA CDMX</option>
+                                <option value=94>SECRETARIA DE TURISMO</option>
+                                <option value=95>SECRETARIA DE TURISMO DE LA CDMX</option>
+                                <option value=96>SECRETARIA DEL MEDIO AMBIENTE</option>
+                                <option value=97>SECRETARIA DEL MEDIO AMBIENTE DE LA CDMX</option>
+                                <option value=98>SECRETARIA EJECUTIVA DE MECANISMOS DE SEGUIMIENTO Y EVALUACION DEL PROGRAMA DE DERECHOS HUMANOS</option>
+                                <option value=99>SISTEMA DE AGUAS DE LA CIUDAD DE MEXICO</option>
+                                <option value=100>SISTEMA P?BLICO DE RADIODIFUSION DE LA CIUDAD DE MEXICO</option>
+                                <option value=101>UNIVERSIDAD DE LA POLICIA DE LA CIUDAD DE MEXICO</option>
+                                <option value=102>NA</option>
+                        </select><br><br>
+                    </td>
+                    </tr>
 
-        <input autocomplete="on" name="comida" class="mytext" placeholder="Nourriture" type="text" autofocus><br><br>
-        <input autocomplete="on" name="pais" class="mytext" placeholder="Pays" type="text"><br><br>
+
+              </table>
+        
+        
         <input type="hidden" id="FieldID" name="FieldName" VALUE= {{ value }} /> 
         <br><br>
     
