@@ -54,9 +54,11 @@
         </nav>
 
         <!-- http://getbootstrap.com/docs/4.1/layout/overview/#containers -->
-        <main class="container-fluid p-5">
-            {% block main %}{% endblock %}
-        </main>
+        <div class="site-wrap">
+            <main class="container">
+                {% block main %}{% endblock %}
+            </main>
+        </div>
 
     </body>
 
