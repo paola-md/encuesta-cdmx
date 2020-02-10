@@ -118,11 +118,35 @@
         <p>2. Escribe el nombre de su jefe directo</p> 
         <input autocomplete="off" name="jefe" class="mytext" placeholder="Jefe Directo" type="text" autofocus><br><br>
         
-        <p>3. Escribe el nombre de las cinco personas con las que trabaja más de cerca y en qué división están</p> 
-        <table style="width:100%">
-                <tr>
+        <style type="text/css">
+            table.tableizer-table {
+                font-size: 12px;
+                border: 1px solid #CCC; 
+                font-family: Arial, Helvetica, sans-serif;
+            } 
+            .tableizer-table td {
+                padding: 4px;
+                margin: 3px;
+                border: 1px solid #CCC;
+            }
+            .tableizer-table th {
+                background-color: #104E8B; 
+                color: #FFF;
+                font-weight: bold;
+            }
+        </style>
+         <p>3. Escribe el nombre de las cinco personas con las que trabaja más de cerca y en qué división están</p> 
+        
+
+        <div class="table-responsive">
+                <table class="tableizer-table">
+                    <thead><tr class="tableizer-firstrow">
+
+       <table style="width:50%" class="tableizer-table">
+            <thead><tr class="tableizer-firstrow">
                   <th>Nombre</th>
                   <th>División</th>
+                </th></tr></thead><tbody>
                 </tr>
                 <tr>
                   <td>
@@ -572,8 +596,7 @@
                         </select><br><br>
                     </td>
                     </tr>
-
-
+                </tbody>
               </table>
         
         
