@@ -2,7 +2,7 @@ cs50==3.0.1
 psycopg2==2.7.5
 psycopg2-binary==2.8.4
 AppInst==2.1.5
-Flask==0.12.2
+Flask==1.0
 Jinja2==2.9.6
 MarkupSafe==1.0
 Pillow==4.0.0
