@@ -34,7 +34,7 @@ def after_request(response):
 
 @app.route("/", methods=["GET"])
 def get_index():
-    return redirect("/form.html")
+    return redirect("/form")
 
 @app.route("/form", methods=["GET"])
 def get_form():
