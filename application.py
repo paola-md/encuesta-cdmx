@@ -48,7 +48,7 @@ def post_form():
     if rand < 5:
         new_dir = "https://www.plataformadetransparencia.org.mx/web/guest/inicio"
         return redirect(new_dir)
-    else
+    else:
         return render_template("gracias.html")
 
 @app.route("/after_survey", methods=["GET"])
