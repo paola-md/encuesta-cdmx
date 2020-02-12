@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html ng-app = "miApp">
+<html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8">}
     </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <style>
@@ -131,7 +131,7 @@ button:hover {
 
 </style>
 <body>
- 
+ <div ng-app = "miApp">
 <form id="regForm" action="/form" method="post">
   <h1>Encuestra CDMX</h1>
   <!-- One "tab" for each step in the form: -->
@@ -796,7 +796,7 @@ button:hover {
     4. Adivine el salario mensual de las siguientes personas (en pesos mexicanos):
     <p></p>
     <div> {{jefe}} </div>
-    <input autocomplete="off" name="salario_jefe" class="mytext" placeholder="Salario 1" type="text" autofocus>
+    <input autocomplete="off" name="salario_jefe" class="mytext" placeholder="Salario Jefe" type="text" autofocus>
     <p></p>
     <div> {{persona1}} </div>
     <input autocomplete="off" name="salario1" class="mytext" placeholder="Salario 1" type="text" autofocus>
@@ -820,7 +820,7 @@ button:hover {
         <nueva-dir></nueva-dir>
         <p></p>
         <div> {{jefe}} </div>
-        <input autocomplete="off" name="salario_jefe_2" class="mytext" placeholder="Salario 1" type="text" autofocus>
+        <input autocomplete="off" name="salario_jefe_2" class="mytext" placeholder="Salario Jefe" type="text" autofocus>
         <p></p>
         <div> {{persona1}} </div>
         <input autocomplete="off" name="salario1_2" class="mytext" placeholder="Salario 1" type="text" autofocus>
@@ -843,31 +843,31 @@ button:hover {
       <div class="tab">
             <p>6.  ¿Le parece incómodo preguntar información salarial a sus compañeros?</p>
             <label class="container">Si
-            <input type="radio" checked="checked" name="radio">
+            <input type="radio" checked="checked" name="radio3">
             <span class="checkmark"></span>
             </label>
             <label class="container">No
-            <input type="radio" name="radio">
+            <input type="radio" name="radio3">
             <span class="checkmark"></span>
             </label>
     
             <p>7. ¿Si le realiza una pregunta sobre su salario a un compañera/o esperaría que este/a la responda?</p>
             <label class="container">Si
-                    <input type="radio" checked="checked" name="radio">
+                    <input type="radio" checked="checked" name="radio1">
                     <span class="checkmark"></span>
                     </label>
                     <label class="container">No
-                    <input type="radio" name="radio">
+                    <input type="radio" name="radio1">
                     <span class="checkmark"></span>
                     </label>
             
             <p>8. ¿Es aceptable socialmente preguntarle a alguien sobre su salario?</p>
             <label class="container">Si
-                    <input type="radio" checked="checked" name="radio">
+                    <input type="radio" checked="checked" name="radio2">
                     <span class="checkmark"></span>
                     </label>
                     <label class="container">No
-                    <input type="radio" name="radio">
+                    <input type="radio" name="radio2">
                     <span class="checkmark"></span>
                     </label>
             
@@ -892,6 +892,7 @@ button:hover {
     <span class="step"></span>
   </div>
 </form>
+</div>
 
 <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
