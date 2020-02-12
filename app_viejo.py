@@ -5,7 +5,6 @@ import os
 import datetime
 import sqlite3
 import psycopg2
-import random
 
 #DATABASE_URL = os.environ['postgres://alvtpzycglidaz:c141b7b9607ef4fe357461796c5252e6b505ad9407fb1c2cfa0cd094b3a05e30@ec2-107-22-222-161.compute-1.amazonaws.com:5432/dco646ec5hp31h']
 
@@ -44,12 +43,24 @@ def get_form():
 
 @app.route("/form", methods=["POST"])
 def post_form():
-    rand = random.randint(0,9)
-    if rand < 5:
-        new_dir = "https://www.plataformadetransparencia.org.mx/web/guest/inicio"
-        return redirect(new_dir)
-    else
-        return render_template("gracias.html")
+    comida = request.form.get("comida")
+    pais = request.form.get("pais")
+    color = request.form.get("FieldName")
+    if len(color) == 0:
+        color = "vacio"
+
+    #date = str(datetime.date.today())
+    if not comida or not pais or not color:
+        return render_template("error.html", message="Please fill in all values!")
+
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    with conn.cursor() as cursor:
+        sql_instr = "insert into preferences(nourriture,pays, couleur) VALUES(" + "'{}'".format(str(comida)) + " , " + "'{}'".format(str(pais))  +" , " + "'{}'".format(str(color)) +")"
+        cursor.execute(sql_instr)
+        conn.commit()
+        conn.close()
+        new_dir = "/after_survey?food=" + str(comida)
+    return redirect(new_dir)
 
 @app.route("/after_survey", methods=["GET"])
 def get_food():

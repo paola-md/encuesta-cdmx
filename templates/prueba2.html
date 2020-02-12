@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app = "miApp">
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
         <meta charset="UTF-8">
@@ -85,13 +85,56 @@ button:hover {
 .step.finish {
   background-color: #4CAF50;
 }
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
 </style>
 <body>
 
 <form id="regForm" action="/action_page.php">
   <h1>Encuestra CDMX</h1>
   <!-- One "tab" for each step in the form: -->
-  
   <div class="tab">
   <p>1. Escoge la división/unidad en la que trabaja</p>    
   <select name="unidad" class="myselect">
@@ -201,7 +244,7 @@ button:hover {
   </select><br><br>
 
   <p>2. Escribe el nombre de su jefe directo</p> 
-  <input autocomplete="off" name="jefe" class="mytext" placeholder="Jefe Directo" type="text" autofocus><br><br>
+  <input ng-model="jefe" autocomplete="off" name="jefe" class="mytext" placeholder="Jefe Directo" type="text" autofocus><br><br>
   
   <p>3. Escribe el nombre de las cinco personas con las que trabaja más de cerca y en qué división están</p> 
         
@@ -752,6 +795,9 @@ button:hover {
   <div class="tab">
     4. Adivine el salario mensual de las siguientes personas (en pesos mexicanos):
     <p></p>
+    <div> {{jefe}} </div>
+    <input autocomplete="off" name="salario_jefe" class="mytext" placeholder="Salario 1" type="text" autofocus>
+    <p></p>
     <div> {{persona1}} </div>
     <input autocomplete="off" name="salario1" class="mytext" placeholder="Salario 1" type="text" autofocus>
     <p></p>
@@ -766,11 +812,68 @@ button:hover {
     <p></p>
     <div> {{persona5}} </div>
     <input autocomplete="off" name="salario5" class="mytext" placeholder="Salario 5" type="text" autofocus>
-    
 
     <p></p>
   </div>
 
+  <div class="tab">
+        <nueva-dir></nueva-dir>
+        <p></p>
+        <div> {{jefe}} </div>
+        <input autocomplete="off" name="salario_jefe_2" class="mytext" placeholder="Salario 1" type="text" autofocus>
+        <p></p>
+        <div> {{persona1}} </div>
+        <input autocomplete="off" name="salario1_2" class="mytext" placeholder="Salario 1" type="text" autofocus>
+        <p></p>
+        <div> {{persona2}} </div>
+        <input autocomplete="off" name="salario2_2" class="mytext" placeholder="Salario 2" type="text" autofocus>
+        <p></p>
+        <div> {{persona3}} </div>
+        <input autocomplete="off" name="salario3_2" class="mytext" placeholder="Salario 3" type="text" autofocus>
+        <p></p>
+        <div> {{persona4}} </div>
+        <input autocomplete="off" name="salario4_2" class="mytext" placeholder="Salario 4" type="text" autofocus>
+        <p></p>
+        <div> {{persona5}} </div>
+        <input autocomplete="off" name="salario5_2" class="mytext" placeholder="Salario 5" type="text" autofocus>
+    
+        <p></p>
+      </div>
+    
+      <div class="tab">
+            <p>6.  ¿Le parece incómodo preguntar información salarial a sus compañeros?</p>
+            <label class="container">Si
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">No
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+            </label>
+    
+            <p>7. ¿Si le realiza una pregunta sobre su salario a un compañera/o esperaría que este/a la responda?</p>
+            <label class="container">Si
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">No
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+            
+            <p>8. ¿Es aceptable socialmente preguntarle a alguien sobre su salario?</p>
+            <label class="container">Si
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">No
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+            
+            
+    </div>
+  
 
 
 
@@ -863,6 +966,32 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
+
+
+var app = angular.module("miApp", []);
+        app.directive("nuevaDir", function () {
+            var rand = Math.random();  
+            if (rand < 0.25){
+                return {
+                template:"<div>5. ¿Cuánto merecen de acuerdo a su mérito?</div>"
+            };  
+            }
+            else if (rand<0.5){
+            return {
+                template:"<div>5. ¿Cuánto merecen de acuerdo al esfuerzo?</div>"
+            }; 
+        }else if (rand<0.75){
+            return {
+                template:"<div>5. ¿Cuánto merecen de acuerdo a su experiencia y nivel de estudios?</div>"
+            }; 
+        } else{
+            return {
+                template:"<div>5. ¿Cuánto merecen de acuerdo a sus habilidades y aptitudes?</div>"
+            }; 
+        }
+
+        });
+
 </script>
 
 </body>
