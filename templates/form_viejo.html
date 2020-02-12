@@ -1,93 +1,16 @@
-<!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<style>
-* {
-  box-sizing: border-box;
-}
+{% extends "layout.html" %}
 
-body {
-  background-color: #f1f1f1;
-}
+{% block main %}
+<script src="form.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
 
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
-}
-
-h1 {
-  text-align: center;  
-}
-
-input {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa;
-}
-
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
-}
-
-/* Hide all steps by default: */
-.tab {
-  display: none;
-}
-
-button {
-  background-color: #4CAF50;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  font-family: Raleway;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-#prevBtn {
-  background-color: #bbbbbb;
-}
-
-/* Make circles that indicate the steps of the form: */
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  border: none;  
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
-
-.step.active {
-  opacity: 1;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #4CAF50;
-}
-</style>
-
-<body>
-
+<div class="row align-items-center">
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
     <h1 class="mb-3">Parte 1</h1>
 
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
     <form action="/form" method="post">
-        <div class="tab">
+        <!-- TODO -->
         <p>1. Escoge la división/unidad en la que trabaja</p>    
         <select name="unidad" class="myselect">
                 <option disabled selected value="División o Unidad">División o Unidad</option>
@@ -676,10 +599,10 @@ button:hover {
                 </tbody>
               </table>
       </div>
-    </div>
-    <div class="tab">
-        4. Otra parte
-    </div>
+
+      <div>
+
+      </div>
 
 
         
@@ -707,7 +630,6 @@ button:hover {
             return true;
         };
     </script>
+</div>
 
-</body>
-
-
+{% endblock %}
